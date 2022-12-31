@@ -32,6 +32,16 @@ The following functionalities have been added to the app:
 
 4. Post: users can post their writings so that other users can read their writings.
 
+-------------------------------------------------------------------------------------------------------------------
+<img width="1230" alt="Screenshot 2022-12-31 at 7 35 07 AM" src="https://user-images.githubusercontent.com/58666496/210122041-02002501-396e-4f74-9601-17d9edb9390e.png">
+
+<img width="1231" alt="Screenshot 2022-12-31 at 7 35 46 AM" src="https://user-images.githubusercontent.com/58666496/210122046-a4791b25-21cb-4a20-ba35-51b97b2ad35b.png">
+
+<img width="1232" alt="Screenshot 2022-12-31 at 7 36 40 AM" src="https://user-images.githubusercontent.com/58666496/210122054-20870620-2aa0-4069-aadc-ac49f40a1d9c.png">
+
+<img width="1232" alt="Screenshot 2022-12-31 at 7 37 06 AM" src="https://user-images.githubusercontent.com/58666496/210122064-7cae8c9a-ee86-4863-bec6-b9821832073f.png">
+
+
 
 ## Installation:
 
