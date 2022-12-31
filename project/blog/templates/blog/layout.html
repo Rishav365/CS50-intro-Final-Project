@@ -1,0 +1,66 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, width=device-width, shrink-to-fit=no">
+
+        <!-- http://getbootstrap.com/docs/5.1/ -->
+        <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" rel="stylesheet">
+        <script crossorigin="anonymous" src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"></script>
+        <link href="{% static 'blog/styles.css' %}" rel="stylesheet">
+        <title>{% block title %}{% endblock %}</title>
+
+    </head>
+
+    <body style="background-color: #1a1b1c;">
+        <header class="site-header">
+          <nav class="navbar navbar-expand-md navbar-light fixed-top"; style="background-color: #cc99ff">
+            <div class="container">
+              <a class="navbar-brand me-4" href="{% url 'blog-home' %}">CS50 Journal</a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarToggle">
+                <!-- Navbar Right Side -->
+                <div class="navbar-nav ms-auto">
+                    {% if user.is_authenticated %}
+                        <a class="nav-item nav-link" style="color: black;" href="{% url 'post-create' %}">New Post</a>
+                        <a class="nav-item nav-link" style="color: black;" href="{% url 'profile' %}">Profile</a>
+                        <a class="nav-item nav-link" style="color: black;" href="{% url 'logout' %}">Logout</a>
+                    {% else %}
+                        <a class="nav-item nav-link" style="color: black;" href="{% url 'login' %}">Login</a>
+                        <a class="nav-item nav-link" style="color: black;" href="{% url 'register' %}">Register</a>
+                    {% endif %}
+                </div>
+              </div>
+            </div>
+          </nav>
+        </header>
+        <main role="main" class="container">
+          <div class="row">
+            <div class="col-md-8">
+                {% if messages %}
+                  {% for message in messages %}
+                    <div class="alert alert-{{} message.tags}" style="color: #f2e6ff;">
+                        {{ message }}
+                    </div>
+                  {% endfor %}
+                {% endif %}
+                {% block content %}{% endblock %}
+            </div>
+            <div class="col-md-4">
+              <div class="content-section" style="background-color: #f2e6ff; border-radius: 25px;">
+                <h3>My Info</h3>
+                <p class='text-muted'>
+                  Hello world! Welcome to my project, CS50 Journal. My name is Rishav Dey, I am 17 years old, I am from Guwahati, India. I made this web app for my final project of CS50's Introduction to Computer Science. This app lets you store and share all stories you have to tell.
+                </p>
+              </div>
+            </div>
+        </div>
+    </body>
+
+</html>
