@@ -1,8 +1,8 @@
-***CS50 Journal***
+# CS50 Journal
 
-**Video Demo:** https://youtu.be/quupp8gXxRs
+## Video Demo: https://youtu.be/quupp8gXxRs
 
-**Description:** 
+## Description:
 
 CS50 Journal lets you store and share your stories with other users.
 
@@ -17,7 +17,7 @@ The following functionalities have been added to the app:
 4. Post: users can post their writings so that other users can read their writings.
 
 
-**Installation:**
+## Installation:
 
 1. Clone the repository to your machine.
 
